@@ -29,7 +29,7 @@ void printgraph(unordered_map<int,vector<int>> &adj, int Vertices) {
 
 
 int main() { 
- int Vertices = 1000000; 
+ int Vertices = 100; 
  
  // Hashmap for adjacency list with integers as keys and vectors of ints
  unordered_map<int,vector<int>> adj;

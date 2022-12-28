@@ -152,14 +152,40 @@ int main(void){
     root->left->left = newNode(4);
     root->left->right = newNode(7);
     root->right = newNode(8);
-    root->left->left->right = newNode(123);
+    root->left->left->right = newNode(12);
+
+    /*
+        Driver Code should make tree as so
+                    9
+                   / \
+                  2   8
+                 / \  
+                4   7
+                 \
+                 12
+    
+    
+    
+    
+    */
  
     cout << "Inorder traversal before deletion : ";
     inorder(root);
  
     int key = 7;
     root = DeleteKey(root, key);
-    root = DeleteKey(root, 123);
+    root = DeleteKey(root, 2);
+
+
+    /*
+        After Deletion Tree should be as follows
+                    9
+                   / \
+                 12   8
+                 /   
+                4                        
+    */
+
 
     cout << endl;
     cout << "Inorder traversal after deletion : ";

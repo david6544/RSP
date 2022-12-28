@@ -72,15 +72,31 @@ int main() {
  unordered_map<int,vector<int>> adj;
 
 
- addDEdge(adj, 0, 1); 
- addDEdge(adj, 0, 2); 
- addDEdge(adj, 1, 2); 
- addDEdge(adj, 2, 0); 
- addDEdge(adj, 2, 3); 
- addDEdge(adj, 3, 3); 
+ addUEdge(adj, 0, 1); 
+ addUEdge(adj, 0, 2); 
+ addUEdge(adj, 1, 2); 
+ addUEdge(adj, 2, 0); 
+ addUEdge(adj, 2, 3); 
+ addUEdge(adj, 3, 3); 
+ addUEdge(adj, 1, 5); 
+ 
  printgraph(adj, Vertices); 
 
- BFS(adj,2,Vertices);
+
+/*
+    Graph should be as follows for driver code:
+
+    0 - 1 - 5
+    | /
+    2 - 3
+
+
+*/
+
+
+
+ BFS(adj, 5,Vertices);
+ cout << endl;
 
  return 0; 
 }

@@ -80,12 +80,24 @@ int main()
     // Hashmap for adjacency list with integers as keys and vectors of ints
 
     g.addDEdge(1, 2);
-    g.addDEdge(2, 4);
     g.addDEdge(1, 3);
-    g.addDEdge(2, 5);
     g.addDEdge(2, 3);
+    g.addDEdge(2, 4);
+    g.addDEdge(2, 5);
     g.addDEdge(3, 3);
+    g.addDEdge(3, 5);
+    
     g.printgraph();
+
+    /*
+        Graph for Driver Code:
+     
+        3 - >5
+        ^ ^  ^
+        |  \ |
+        1 -> 2 -> 4
+           
+    */
 
     g.DFS(1);
 
